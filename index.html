@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulhameed Osama — Software Engineer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#2563eb', // Royal Blue
+                            400: '#38bdf8', // Electric Sky
+                            600: '#1d4ed8',
+                        },
+                        dark: {
+                            950: '#060913',
+                            900: '#0b0f19',
+                            800: '#131b2e',
+                            700: '#1e293b',
+                            border: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .passport-card {
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .passport-card:hover {
+            transform: translateY(-2px);
+        }
+        /* Custom professional scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060913;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Toast Notification for Email Copy -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-500 text-white font-medium font-mono text-xs px-4 py-3 rounded-lg shadow-2xl flex items-center gap-2 pointer-events-none">
+        <i class="fas fa-check-circle text-base"></i>
+        <span>Email copied to clipboard!</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-dark-950/85 backdrop-blur-md border-b border-dark-border">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono text-sm font-semibold text-white tracking-wider flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                Abdulhameed Osama
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs font-mono text-slate-400">
+                <a href="#deployments" class="hover:text-white transition-colors">Deployments</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#education" class="hover:text-white transition-colors">Education</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="copyEmail()" class="px-3.5 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-medium text-xs rounded transition-all shadow-lg shadow-brand-500/10">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- Hero Section -->
+                <!-- Hero Section -->
+        <section class="mb-20">
+            <div class="flex flex-col-reverse md:flex-row items-start justify-between gap-8 md:gap-12">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-mono text-brand-400 mb-6">
+                        <i class="fas fa-globe-africa text-xs"></i>
+                        <span>Data Engineer @ Huawei · AI & Systems Builder</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+                        Abdulhameed Osama
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl font-bold text-brand-400 tracking-tight mb-6">
+                        Software & AI Engineer.
+                    </h2>
+
+                    <p class="text-base md:text-lg text-slate-400 max-w-2xl mb-8 leading-relaxed">
+                        Computer Engineering graduate from Cairo University ('24). I design low-latency backends, train custom NLP & computer vision models, and deploy enterprise data infrastructure using multiple programming languages including <strong class="text-white">Python, C++, and SQL</strong> across international telecom networks in Saudi Arabia, Senegal, Burkina Faso, and Egypt.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <button onclick="copyEmail()" class="flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-medium text-xs px-5 py-3 rounded transition-all shadow-lg shadow-brand-500/20">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdulhameed.osama2001@gmail.com</span>
+                        </button>
+                        <a href="https://github.com/AbdulhameedO" target="_blank" rel="noopener" class="flex items-center gap-2 bg-dark-900 border border-dark-border hover:border-slate-600 text-slate-200 font-mono text-xs px-4 py-3 rounded transition-all">
+                            <i class="fab fa-github text-base"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abdulhameed-osama" target="_blank" rel="noopener" class="flex items-center gap-2 bg-dark-900 border border-dark-border hover:border-slate-600 text-slate-200 font-mono text-xs px-4 py-3 rounded transition-all">
+                            <i class="fab fa-linkedin text-base text-brand-400"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Personal Photo -->
+                <div class="relative shrink-0 mx-auto md:mx-0">
+                    <div class="absolute -inset-0.5 rounded-2xl blur opacity-30"></div>
+                    <img src="profile.jpg" alt="Abdulhameed Osama" class="relative w-20 h-20 md:w-80 md:h-80 object-cover rounded-2xl border border-dark-border shadow-2xl">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Field Operations Passport Log -->
+        <section id="deployments" class="mb-20 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+                <div>
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">Global Operations</h2>
+                    <h3 class="text-2xl font-bold text-white">On-Site & International Deployments</h3>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Saudi Arabia -->
+                <div class="passport-card bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-white font-bold text-base mb-1">Saudi Arabia</span>
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Riyadh & Dammam</span>
+                        </div>
+                        <h4 class="text-white text-base mb-1">STC CEM Deployment</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">3 Months · Datacom Infrastructure</p>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Rapidly self-trained on complex datacom concepts to configure 28 servers, 18 switches, and 9 TAPs. Diagnosed 10+ down port issues and authored RFCs for full site handover.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-dark-border text-xs font-mono text-slate-400">
+                        ⚡ Hardware Faults Resolved: <span class="text-white">10+</span>
+                    </div>
+                </div>
+
+                <!-- Burkina Faso -->
+                <div class="passport-card bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-white font-bold text-base mb-1">Burkina Faso</span>
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Ouagadougou</span>
+                        </div>
+                        <h4 class="text-white text-base mb-1">Orange BNS</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">6 Weeks · BNS Backend & SQL</p>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Handled a 4× mid-project scope growth by redesigning data processing workflows and co-proposing a regional-first 3-phase delivery model, averting contract disputes.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-dark-border text-xs font-mono text-slate-400">
+                        🛠️ Scope Handled: <span class="text-white">4× (4→16 pages)</span>
+                    </div>
+                </div>
+
+                <!-- Senegal -->
+                <div class="passport-card bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-white font-bold text-base mb-1">Senegal</span>
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Dakar & Rural Sites</span>
+                        </div>
+                        <h4 class="text-white text-base mb-1">Sonatel SmartCare Platform</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">1 Month · Multi-Site OSS Rollout</p>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Led subcontractor teams across 3 sites to install 24 servers, 8 switches, and 4 TAPs.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-dark-border text-xs font-mono text-slate-400">
+                        ⏱️ 3 Sites Installed On Schedule
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Work Experience Timeline -->
+        <section id="experience" class="mb-20 scroll-mt-24">
+            <div class="mb-8">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">Career History</h2>
+                <h3 class="text-2xl font-bold text-white">Work Experience</h3>
+            </div>
+
+            <div class="space-y-8 border-l border-dark-border pl-6 ml-2">
+                
+                <!-- Huawei -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-brand-400 border-4 border-dark-950"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <h4 class="text-lg font-bold text-white">Data Engineer — Automation & Deployment</h4>
+                        <span class="text-xs font-mono text-slate-400">Dec 2024 – Present</span>
+                    </div>
+                    <p class="text-xs font-mono text-brand-400 mb-3">Huawei Technologies · Smart Village, Giza (Deployments: KSA, Senegal, Burkina Faso)</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 leading-relaxed">
+                        <li>Redesigned data processing workflows in Burkina Faso during a 4x scope expansion, co-proposing a phased delivery plan to resolve a potential contract dispute and strengthen client relationships.</li>
+                        <li>Configured 28 servers, 18 switches, and 9 TAPs for STC CEM in Saudi Arabia; diagnosed and resolved 10+ hardware faults under a tight two-week deadline.</li>
+                        <li>Developed Python automation scripts for Mali regional telemetry reporting, reducing generation time by 40%. Modified 30+ KPI probe definitions for Gabon and Cape Verde probe logic.</li>
+                        <li>Managed subcontractor teams in Senegal to deploy the SmartCare platform across 3 sites (24 servers, 8 switches, 4 TAPs) on schedule.</li>
+                    </ul>
+                </div>
+
+                <!-- Loc&More -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border border-4 border-dark-950"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <h4 class="text-lg font-bold text-white">Artificial Intelligence Engineer (Project-Based)</h4>
+                        <span class="text-xs font-mono text-slate-400">Sep 2024 – Nov 2024</span>
+                    </div>
+                    <p class="text-xs font-mono text-slate-400 mb-3">Loc&More · Giza, Egypt</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 leading-relaxed">
+                        <li>Architected company's first English-to-Arabic machine translation engine using transfer learning on a 100K+ word dataset, outperforming DeepL by 50% on domain benchmarks.</li>
+                        <li>Engineered reusable text preprocessing, cleaning, tokenization, and data augmentation pipelines using Hugging Face for rapid multi-language pair iterations.</li>
+                    </ul>
+                </div>
+
+                <!-- ACT -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border border-4 border-dark-950"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <h4 class="text-lg font-bold text-white">Network Engineer Intern</h4>
+                        <span class="text-xs font-mono text-slate-400">Aug 2023 – Sep 2023</span>
+                    </div>
+                    <p class="text-xs font-mono text-slate-400 mb-3">Advanced Computer Technology (ACT) · Smart Village, Giza</p>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Established network infrastructure at enterprise client sites, collaborating with cross-functional teams to configure switches, routers, and VLANs.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Matrix (Grouped Grid) -->
+        <section id="skills" class="mb-20 scroll-mt-24">
+            <div class="mb-8">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">Technical Capabilities</h2>
+                <h3 class="text-2xl font-bold text-white">Skills Matrix</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- AI & Machine Learning -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl">
+                    <h4 class="text-sm font-mono font-semibold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-brain text-brand-400"></i> AI & Machine Learning
+                    </h4>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">PyTorch</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">TensorFlow</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Hugging Face Transformers</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">OpenCV</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">NLP</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Transfer Learning</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Scikit-learn</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">NumPy</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Backend & Core Languages -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl">
+                    <h4 class="text-sm font-mono font-semibold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-code text-brand-400"></i> Backend & Core Languages
+                    </h4>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Python</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">C / C++</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">SQL</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Bash / Shell</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">JavaScript</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">HTML5 / CSS3</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Web -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl">
+                    <h4 class="text-sm font-mono font-semibold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-cubes text-brand-400"></i> Frameworks & Architecture
+                    </h4>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">FastAPI</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Django</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">RESTful API Design</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Microservices</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Microsecond Latency Optimization</span>
+                    </div>
+                </div>
+
+                <!-- Databases, DevOps & Hardware Tools -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl">
+                    <h4 class="text-sm font-mono font-semibold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-server text-brand-400"></i> Databases, DevOps & Hardware
+                    </h4>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">PostgreSQL</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">MongoDB</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Docker</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Linux</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Git / GitHub</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Postman</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Pytest</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Embedded C</span>
+                        <span class="px-2.5 py-1 bg-dark-950 border border-dark-border rounded text-slate-300">Network Infra (VLANs, TAPs)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section (Filterable 7 Projects) -->
+        <section id="projects" class="mb-20 scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">Portfolio</h2>
+                    <h3 class="text-2xl font-bold text-white">Featured Engineering Projects</h3>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0 font-mono text-xs">
+                    <button onclick="filterProjects('all')" id="tab-all" class="filter-btn active px-3.5 py-1.5 rounded bg-brand-500 text-white font-medium transition-all">All (7)</button>
+                    <button onclick="filterProjects('ai-nlp')" id="tab-ai-nlp" class="filter-btn px-3.5 py-1.5 rounded bg-dark-900 border border-dark-border text-slate-400 hover:text-white transition-all">AI & NLP</button>
+                    <button onclick="filterProjects('backend-systems')" id="tab-backend-systems" class="filter-btn px-3.5 py-1.5 rounded bg-dark-900 border border-dark-border text-slate-400 hover:text-white transition-all">Backend & Systems</button>
+                    <button onclick="filterProjects('robotics-fullstack')" id="tab-robotics-fullstack" class="filter-btn px-3.5 py-1.5 rounded bg-dark-900 border border-dark-border text-slate-400 hover:text-white transition-all">Robotics & Full-Stack</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card ai-nlp bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">AI & NLP</span>
+                            <a href="https://github.com/AbdulhameedO/Sentiment-Analysis" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">SpeaX — Emotion Audiobook Generator</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Graduation Project — Grade: Excellent</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Multi-class emotion classifier achieving 90% accuracy across 6 emotions. Serves text-to-speech (TTS) audio generation pipelines via FastAPI microservices backed by MongoDB.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>Python</span> · <span>FastAPI</span> · <span>MongoDB</span> · <span>Scikit-Learn</span> · <span>PyTorch</span> · <span>TTS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card ai-nlp bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">AI & NLP</span>
+                            <a href="https://github.com/AbdulhameedO/Automatic_Arabic_Diacritization" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Neural Arabic Diacritization Pipeline</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Deep Learning / Sequence Labeling</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Sequence labeling Bi-LSTM neural network achieving 88.25% character accuracy for automated Arabic text diacritization, approaching human benchmarks (91%).
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>PyTorch</span> · <span>Python</span> · <span>NLP</span> · <span>Bi-LSTM</span> · <span>Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card ai-nlp bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">AI & NLP</span>
+                            <a href="https://github.com/AbdulhameedO/You-Shall-Not-Pass" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">License Plate Detection & OCR Engine</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Computer Vision Pipeline</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Spatial computer vision processing pipeline delivering 94% OCR character recognition accuracy and 80% real-time detection rate under dynamic lighting and orientations.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>Python</span> · <span>OpenCV</span> · <span>Computer Vision</span> · <span>Deep Learning</span> · <span>OCR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card backend-systems bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Backend & Systems</span>
+                            <a href="https://github.com/ammaralmorsi/eventbrite" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Eventbrite Microservices Platform Clone</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Test-Driven REST Microservices</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Containerized RESTful microservices architecture built using Test-Driven Development (TDD) with Pytest and Docker orchestration for high-concurrency event management.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>Python</span> · <span>FastAPI</span> · <span>MongoDB</span> · <span>Docker</span> · <span>Pytest</span> · <span>TDD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card backend-systems bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Backend & Systems</span>
+                            <a href="https://github.com/AbdulhameedO/law-tayh-3al-mariiii55" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Mars Exploration Simulator</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Data Structures & OOP Engine</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Engineered custom priority queues, vectors, and linked lists in C++ from scratch to power an object-oriented mission allocation simulation engine for Mars rovers.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>C++</span> · <span>OOP</span> · <span>Custom Data Structures</span> · <span>Priority Queues</span> · <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card robotics-fullstack bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Robotics & Full-Stack</span>
+                            <a href="https://github.com/AbdulhameedO" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Robotic Arm Cook System (Closed-Loop)</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Embedded Firmware & Spatial Control</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Developed low-level firmware in Embedded C integrating spatial feedback sensors and closed-loop control, improving motion precision and positioning accuracy by 30%.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>Embedded C</span> · <span>Arduino</span> · <span>Robotics</span> · <span>Feedback Sensors</span> · <span>PWM Signals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card robotics-fullstack bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Robotics & Full-Stack</span>
+                            <a href="https://github.com/AbdulhameedO" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-github text-base"></i></a>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">World Cup Ticket Booking Platform</h4>
+                        <p class="text-xs font-mono text-slate-400 mb-3">Full-Stack Transactional Engine</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Responsive full-stack platform featuring normalized PostgreSQL database schemas and transactional reservation mechanisms to prevent concurrent booking conflicts.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 pt-4 border-t border-dark-border">
+                            <span>Python</span> · <span>Django</span> · <span>PostgreSQL</span> · <span>HTML5 / CSS3</span> · <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="mb-20 scroll-mt-24">
+            <div class="mb-8">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">Academic Background</h2>
+                <h3 class="text-2xl font-bold text-white">Education & Certifications</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Education Card -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Degree</span>
+                        <h4 class="text-xl font-bold text-white mt-3">B.Sc. in Computer Engineering</h4>
+                        <p class="text-sm text-slate-400 mt-1">Cairo University, Faculty of Engineering</p>
+                        <p class="text-xs font-mono text-slate-400 mt-1">Class of 2024</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-dark-border flex justify-between text-xs font-mono">
+                        <span class="text-slate-300">Overall Grade: <strong class="text-white">Very Good</strong></span>
+                        <span class="text-slate-300">Graduation Project: <strong class="text-brand-400">Excellent</strong></span>
+                    </div>
+                </div>
+
+                <!-- Certifications Grid -->
+                <div class="bg-dark-900 border border-dark-border p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded">Verified Credentials</span>
+                        <h4 class="text-xl font-bold text-white mt-3">Professional Certifications</h4>
+                    </div>
+
+                    <div class="space-y-3 mt-4 text-xs font-mono">
+                        <div class="flex items-center justify-between p-2.5 bg-dark-950 rounded border border-dark-border">
+                            <span class="text-white flex items-center gap-2">
+                                <i class="fas fa-certificate text-brand-400"></i> DeepLearning.AI Specialization
+                            </span>
+                            <span class="text-slate-400">2022</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-2.5 bg-dark-950 rounded border border-dark-border">
+                            <span class="text-white flex items-center gap-2">
+                                <i class="fab fa-aws text-yellow-500"></i> AWS Cloud Fundamentals
+                            </span>
+                            <span class="text-slate-400">2023</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-2.5 bg-dark-950 rounded border border-dark-border">
+                            <span class="text-white flex items-center gap-2">
+                                <i class="fas fa-vial text-blue-400"></i> ISTQB Certified Tester (CTFL)
+                            </span>
+                            <span class="text-slate-400">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-dark-border pt-12 text-center">
+            <h3 class="text-2xl font-bold text-white mb-3">Ready to Discuss Engineering Opportunities?</h3>
+            <p class="text-sm text-slate-400 mb-6 max-w-md mx-auto">
+                Open to full-time Software, Backend, and AI Engineering roles worldwide.
+            </p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="copyEmail()" class="px-5 py-2.5 bg-brand-500 text-white font-medium text-xs rounded hover:bg-brand-600 transition-colors flex items-center gap-2 shadow-lg shadow-brand-500/20">
+                    <i class="fas fa-copy"></i>
+                    <span>abdulhameed.osama2001@gmail.com</span>
+                </button>
+            </div>
+            <div class="text-xs font-mono text-slate-400">
+                © 2026 Abdulhameed Osama · Cairo, Egypt
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Project Tab Filtering Logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Reset active button styling
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-500', 'text-white', 'font-medium');
+                btn.classList.add('bg-dark-900', 'text-slate-400', 'border', 'border-dark-border');
+            });
+
+            // Set clicked button to active state
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.classList.remove('bg-dark-900', 'text-slate-400', 'border', 'border-dark-border');
+                activeTab.classList.add('bg-brand-500', 'text-white', 'font-medium');
+            }
+
+            // Show/Hide project cards based on category
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Copy Email to Clipboard Toast
+        function copyEmail() {
+            const email = "abdulhameed.osama2001@gmail.com";
+            navigator.clipboard.writeText(email);
+
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
